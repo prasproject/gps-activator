@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Activate Location</title>
+</head>
+<body>
+    <button id="activateLocation">Activate Location</button>
+
+    <script>
+        document.getElementById("activateLocation").addEventListener("click", function() {
+            if ("geolocation" in navigator) {
+                alert("Please activate location in your device settings.");
+                // Redirect to device location settings
+                window.location.href = "app-settings:location";
+            } else {
+                alert("Geolocation is not supported in this browser.");
+            }
+        });
+    </script>
+</body>
+</html>
